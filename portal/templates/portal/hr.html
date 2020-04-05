@@ -1,0 +1,22 @@
+{% extends "portal/base.html" %}
+{{ request.get_full_path }}
+{% block content %}
+
+  {% if hr_video_list %}
+    <ul>
+      {% for video in hr_video_list %}
+        <h2> {{ video.video_name|title }} </h2>
+        <p> {{ video.video_upload.url }} </p>
+        <div>
+          <video width="320" height="240" controls>
+            <source src="portal:{{ video.video_upload.url }}" type="video/mp4">
+
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No HR videos are available.</p>
+  {% endif %}
+{% endblock %}

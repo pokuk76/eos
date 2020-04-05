@@ -1,0 +1,318 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>Tullow Oil Ghana | Tutorials and Induction Videos</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Tullow Oil Ghana" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta tag Keywords -->
+
+	<!-- Custom-Files -->
+	<link rel="stylesheet" href="{% static 'portal/css/bootstrap.css' %}">
+	<!-- Bootstrap-Core-CSS -->
+	<link rel="stylesheet" href="{% static 'portal/css/style.css' %}" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link href="{% static 'portal/css/font-awesome.min.css' %}" rel="stylesheet">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //Custom-Files -->
+
+	<!-- Web-Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=devanagari,latin-ext"
+	 rel="stylesheet">
+	<!-- //Web-Fonts -->
+
+	<style>
+		.dropbtn {
+			background-color: #3498DB;
+			color: white;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+		}
+
+		.dropbtn:hover, .dropbtn:focus {
+			background-color: #2980B9;
+		}
+
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f1f1f1;
+			min-width: 160px;
+			overflow: auto;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+
+		.dropdown a:hover {background-color: #ddd;}
+
+		.show {display: block;}
+	</style>
+</head>
+
+<body>
+	<!-- main banner -->
+	<div class="main-top" id="home">
+		<!-- header -->
+		<header>
+			<div class="container-fluid">
+				<div class="header d-lg-flex justify-content-between align-items-center py-3 px-sm-3">
+					<!-- logo -->
+					<div id="logo">
+						<h1><a href="{% url 'portal:tutorials' %}"><span class="fa fa-linode mr-2"></span>Tullow Oil Ghana</a></h1>
+					</div>
+					<!-- //logo -->
+					<!-- nav -->
+					<div class="nav_w3ls">
+						<nav>
+							<label for="drop" class="toggle">Menu</label>
+							<input type="checkbox" id="drop" />
+							<ul class="menu">
+								<li><a href="{% url 'portal:tutorials' %}" class="active">Tutorials & Videos</a></li>
+								<li><a href="{% url 'portal:forms' %}">Forms to Fill</a></li>
+								<li><a href="{% url 'portal:todo' %}">Todo List & Resources</a></li>
+								<li><a href="{% url 'portal:employees' %}">Other Employess</a></li>
+							</ul>
+						</nav>
+					</div>
+					<!-- //nav -->
+					<div class="d-flex mt-lg-1 mt-sm-2 mt-3 justify-content-center">
+
+						<!-- download
+						<a class="dwn-w3ls btn" href="#">
+							<span class="fa fa-user"></span>
+						</a>
+						a href="javascript:openwindow()
+						-->
+
+						<div class="dropdown">
+							<a class="dropbtn" href="javascript:myFunction()">
+								<span class="fa fa-user"></span>
+							</a>
+						  <div id="myDropdown" class="dropdown-content">
+						    <a href="#">{{user.full_name}}</a>
+								<a href="#">{{user.dept.dept_name}}</a>
+						    <a href="#settings">Settings</a>
+								<a href="{% url 'logout' %}">Logout</a>
+						  </div>
+						</div>
+
+						<script>
+							/* When the user clicks on the button,
+							toggle between hiding and showing the dropdown content */
+							function myFunction() {
+							  document.getElementById("myDropdown").classList.toggle("show");
+							}
+
+							// Close the dropdown if the user clicks outside of it
+							window.onclick = function(event) {
+							  if (!event.target.matches('.dropbtn')) {
+							    var dropdowns = document.getElementsByClassName("dropdown-content");
+							    var i;
+							    for (i = 0; i < dropdowns.length; i++) {
+							      var openDropdown = dropdowns[i];
+							      if (openDropdown.classList.contains('show')) {
+							        openDropdown.classList.remove('show');
+							      }
+							    }
+							  }
+							}
+						</script>
+
+						<!-- //download -->
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- banner -->
+		<div class="banner_w3lspvt position-relative">
+			<div class="container">
+				<div class="d-md-flex">
+					<div class="w3ls_banner_txt">
+						<h3 class="w3ls_pvt-title">Tutorials and Induction<br><span>Videos</span></h3>
+						<p class="text-sty-banner">Sed ut perspiciatis unde omnis iste natus doloremque
+							laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
+
+					</div>
+					<div class="banner-img">
+						<img src="{% static 'portal/images/banner.png' %}" alt="" class="img-fluid">
+					</div>
+				</div>
+			</div>
+			<!-- animations effects -->
+			<div class="icon-effects-w3l">
+				<img src="{% static 'portal/images/shape1.png' %}" alt="" class="img-fluid shape-wthree shape-w3-one">
+				<img src="{% static 'portal/images/shape2.png' %}" alt="" class="img-fluid shape-wthree shape-w3-two">
+				<img src="{% static 'portal/images/shape3.png' %}" alt="" class="img-fluid shape-wthree shape-w3-three">
+				<img src="{% static 'portal/images/shape5.png' %}" alt="" class="img-fluid shape-wthree shape-w3-four">
+				<img src="{% static 'portal/images/shape4.png' %}" alt="" class="img-fluid shape-wthree shape-w3-five">
+				<img src="{% static 'portal/images/shape6.png' %}" alt="" class="img-fluid shape-wthree shape-w3-six">
+			</div>
+			<!-- //animations effects -->
+		</div>
+		<!-- //banner -->
+	</div>
+	<!-- //main banner -->
+
+	<!-- Videos -->
+	<section class="banner-bottom-w3layouts bg-li py-5" id="services">
+		<div class="container py-xl-5 py-lg-3">
+			<h3 class="tittle text-center font-weight-bold">Videos</h3>
+			<p class="sub-tittle text-center mt-3 mb-sm-5 mb-4">Sed do eiusmod tempor incididunt ut labore et dolore magna
+				aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+
+			<div class="row pt-lg-4">
+					{% if user_video_list %}
+						{% for video in user_video_list %}
+							<div class="col-lg-4 about-in text-center my-lg-0 my-3">
+								<div class="card active">
+									<div class="card-body">
+										<iframe width="250" height="250" src="{{ video.video_url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										<h5 class="card-title mt-4 mb-3">{{ video.video_name|title }}</h5>
+										<p class="card-text">{{ video.video_description }}</p>
+										<!-- <a href="about.html" class="btn button-style mt-sm-5 mt-4">Watch Video</a> -->
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+					{% else %}
+						<div class="col-lg-4 about-in text-center my-lg-0 my-3">
+							<div class="card active">
+								<div class="card-body">
+									<img src="images/faq.png" height="200px" width="200px" />
+									<h5 class="card-title mt-4 mb-3">No Videos Available For The {{user.dept}} Department</h5>
+									<p class="card-text">Lorem ipsum dolor sit amet consectetur elit,Adipisicing elit tempor.</p>
+								</div>
+							</div>
+						</div>
+				{% endif %}
+			</div>
+		</div>
+	</section>
+	<!-- //videos -->
+	<!-- stats -->
+	<section class="bottom-count py-5" id="stats">
+		<div class="container py-xl-5 py-lg-3">
+			<div class="row">
+				<div class="col-lg-5 left-img-w3ls">
+					<img src="{% static 'portal/images/b2.png' %}" alt="" class="img-fluid" />
+				</div>
+				<div class="col-lg-7 right-img-w3ls pl-lg-4 mt-lg-2 mt-4">
+					<div class="bott-w3ls mr-xl-5">
+						<h3 class="title-w3 text-bl mb-3 font-weight-bold">Industry Specific Educational Videos</h3>
+						<p class="title-sub-2 mb-3">Excepteur sint occaecat cupidatat <br>non proident.</p>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+							laudantium. </p>
+					</div>
+					<div class="row mt-5">
+						<div class="col-sm-4 count-w3ls">
+							<h4>1000+</h4>
+							<p>High Quality Videos</p>
+						</div>
+						<div class="col-sm-4 count-w3ls mt-sm-0 mt-3">
+							<h4>480+</h4>
+							<p>Resource Persons</p>
+						</div>
+						<div class="col-sm-4 count-w3ls mt-sm-0 mt-3">
+							<h4>600+</h4>
+							<p>Pratical Videos</p>
+						</div>
+					</div>
+					<div class="row mt-sm-5 mt-4">
+						<div class="col-sm-4 count-w3ls">
+							<h4>480+</h4>
+							<p>Consultants</p>
+						</div>
+						<div class="col-sm-4 count-w3ls mt-sm-0 mt-3">
+							<h4>600+</h4>
+							<p>Award Winning</p>
+						</div>
+						<div class="col-sm-4 count-w3ls mt-sm-0 mt-3">
+							<h4>1000+</h4>
+							<p>Project completed</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- //stats -->
+	<!-- //footer -->
+	<!-- copyright bottom -->
+	<div class="copy-bottom bg-li py-4 border-top">
+		<div class="container-fluid">
+			<div class="d-md-flex px-md-3 position-relative text-center">
+				<!-- footer social icons -->
+				<div class="social-icons-footer mb-md-0 mb-3">
+					<ul class="list-unstyled">
+						<li>
+							<a href="#">
+								<span class="fa fa-facebook"></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="fa fa-twitter"></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="fa fa-google-plus"></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="fa fa-instagram"></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- //footer social icons -->
+				<!-- copyright -->
+				<div class="copy_right mx-md-auto mb-md-0 mb-3">
+					<p class="text-bl let">© 2019 Tullow Oil Ghana. All rights reserved | Powered by
+						<a href="#" target="_blank">OI</a>
+					</p>
+				</div>
+				<!-- //copyright -->
+				<!-- move top icon -->
+				<a href="#home" class="move-top text-center">
+					<span class="fa fa-level-up" aria-hidden="true"></span>
+				</a>
+				<!-- //move top icon -->
+			</div>
+		</div>
+	</div>
+	<!-- //copyright bottom -->
+
+</body>
+
+</html>

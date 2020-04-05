@@ -1,0 +1,16 @@
+{% extends "portal/base.html" %}
+{% block content %}
+
+  {% if is_video_list %}
+    <ul>
+      {% for video in is_video_list %}
+        <h2> {{ video.video_name|title }} </h2>
+        <div>
+          <iframe width="560" height="315" src="{{ video.video_url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No IS videos are available.</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,213 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang = "en-US">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Site Meta -->
+    <title>nrg</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{% static 'portal/images/favicon.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'portal/images/apple-touch-icon.png' %}">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+
+    <!-- Custom & Default Styles -->
+    <link rel="stylesheet" href="{% static 'portal/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'portal/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'portal/css/carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'portal/style.css' %}">
+  </head>
+
+  <body class="left-menu">
+          <header class="vertical-header">
+              <div class="vertical-header-wrapper">
+                  <nav class="nav-menu">
+                      <div class="logo">
+                          <a href="{% url 'portal:home' %}"><img src="{% static 'portal/images/nrg.png' %}" alt=""></a>
+                      </div><!-- end logo -->
+
+                      <div class="margin-block"></div>
+
+                      <ul class="primary-menu">
+                          <li class = "user"><i class="test"></i>
+                            {% include "portal/email.html" %}
+                          </li>
+                          <li class="child-menu"><a href="{% url 'portal:home' %}">Home <i class="fa fa-angle-right"></i></a>
+                              <div class="sub-menu-wrapper">
+                                  <ul class="sub-menu center-content">
+                                      <li><a href="#">Menu Example 01</a></li>
+                                      <li><a href="#">Menu Example 02</a></li>
+                                      <li><a href="#">Menu Example 03</a></li>
+                                      <li><a href="#">Menu Example 04</a></li>
+                                      <li><a href="#">Menu Example 05</a></li>
+                                      <li><a href="#">Menu Example 06</a></li>
+                                  </ul>
+                              </div>
+                          </li>
+
+                          <li class="child-menu"><a href="{% url 'logout' %}">Logout <i class="fa fa-angle-right"></i></a>
+                          </li>
+                          <li class="child-menu"><a href="test.html">Portfolio <i class="fa fa-angle-right"></i></a>
+                              <div class="sub-menu-wrapper">
+                                  <ul class="sub-menu center-content">
+                                      <li><a href="#">Menu Example 01 <i class="fa fa-angle-right"></i></a>
+                                          <div class="subsub-menu-wrapper">
+                                              <ul class="subsub-menu center-content">
+                                                  <li><a href="#">Menu Example 01</a></li>
+                                                  <li><a href="#">Menu Example 02</a></li>
+                                                  <li><a href="#">Menu Example 03</a></li>
+                                                  <li><a href="#">Menu Example 04</a></li>
+                                              </ul>
+                                          </div>
+                                      </li>
+                                      <li><a href="#">Menu Example 02 <i class="fa fa-angle-right"></i></a>
+                                          <div class="subsub-menu-wrapper">
+                                              <ul class="subsub-menu center-content">
+                                                  <li><a href="#">Menu Example 01</a></li>
+                                                  <li><a href="#">Menu Example 02</a></li>
+                                                  <li><a href="#">Menu Example 03</a></li>
+                                                  <li><a href="#">Menu Example 04</a></li>
+                                                  <li><a href="#">Menu Example 05</a></li>
+                                                  <li><a href="#">Menu Example 06</a></li>
+                                              </ul>
+                                          </div>
+                                      </li>
+                                      <li><a href="#">Menu Example 03 <i class="fa fa-angle-right"></i></a>
+                                          <div class="subsub-menu-wrapper">
+                                              <ul class="subsub-menu center-content">
+                                                  <li><a href="#">Menu Example 01</a></li>
+                                                  <li><a href="#">Menu Example 02</a></li>
+                                                  <li><a href="#">Menu Example 03</a></li>
+                                                  <li><a href="#">Menu Example 04</a></li>
+                                                  <li><a href="#">Menu Example 05</a></li>
+                                                  <li><a href="#">Menu Example 06</a></li>
+                                              </ul>
+                                          </div>
+                                      </li>
+                                      <li><a href="#">Menu Example 04 <i class="fa fa-angle-right"></i></a>
+                                          <div class="subsub-menu-wrapper">
+                                              <ul class="subsub-menu center-content">
+                                                  <li><a href="#">Menu Example 01</a></li>
+                                                  <li><a href="#">Menu Example 02</a></li>
+                                                  <li><a href="#">Menu Example 03</a></li>
+                                              </ul>
+                                          </div>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </li>
+                          <li class="child-menu"><a href="test.html">Departments <i class="fa fa-angle-right"></i></a>
+                              <div class="sub-menu-wrapper">
+                                  <ul class="sub-menu center-content">
+                                      <li><a href="{% url 'portal:is' %}">Information Systems</a></li>
+                                      <li><a href="{% url 'portal:hr' %}">Human Resources</a></li>
+                                      <li><a href="#">Menu Example 03</a></li>
+                                      <li><a href="#">Menu Example 04</a></li>
+                                      <li><a href="#">Menu Example 05</a></li>
+                                      <li><a href="#">Menu Example 06</a></li>
+                                  </ul>
+                              </div>
+                          </li>
+                          <li class="child-menu"><a href="#">Blog <i class="fa fa-angle-right"></i></a>
+                              <div class="sub-menu-wrapper">
+                                  <ul class="sub-menu center-content">
+                                      <li><a href="#">Menu Example 01</a></li>
+                                      <li><a href="#">Menu Example 02</a></li>
+                                      <li><a href="#">Menu Example 03</a></li>
+                                      <li><a href="#">Menu Example 04</a></li>
+                                      <li><a href="#">Menu Example 05</a></li>
+                                      <li><a href="#">Menu Example 06</a></li>
+                                  </ul>
+                              </div>
+                          </li>
+                          <li><a href="#">Contact</a></li>
+                          <li><a href="https://html.design">Download <i class="fa fa-shopping-bag"></i></a></li>
+                      </ul>
+
+                      <div class="margin-block"></div>
+
+                      <div class="menu-search">
+                          <form>
+                              <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="What are you looking for?">
+                                  <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+                              </div>
+                          </form>
+                      </div><!-- end menu-search -->
+
+                      <div class="margin-block"></div>
+
+                      <div class="menu-social">
+                          <ul class="list-inline text-center">
+                              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                          </ul>
+                      </div><!-- end menu -->
+                  </nav><!-- end nav-menu -->
+              </div><!-- end vertical-header-wrapper -->
+          </header><!-- end header -->
+      </div><!-- end menu-wrapper -->
+
+      <div id="wrapper">
+
+        <div class="section bgcolor noover">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="tagline-message">
+                            <h3><mark class="rotate">Welcome, Akwaaba, Bienvenue, Willkommen, Merhbe</mark> to NRG: the home energy monitoring system</h3>
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end section -->
+
+        <div id="home" class="video-section js-height-full">
+            <div class="overlay"></div>
+            <div class="home-text-wrapper relative container">
+                <div class="home-message">
+                    <img src=" {% static 'portal/images/nrg.png' %}" alt="">
+                    <div>
+                      {% block content %}
+                      {% endblock %}
+                    </div>
+
+
+
+                    <div class="btn-wrapper">
+                        <div class="text-center">
+                            <a href="#" class="btn btn-primary">Read More</a> &nbsp;<a href="#" class="btn btn-default">Buy Now</a>
+                        </div>
+                    </div><!-- end row -->
+                </div>
+            </div>
+        </div>
+
+
+   </div>
+
+  <button>Get External Content</button>
+
+  <!-- jQuery Files -->
+  <script src="{% static 'portal/js/rotate.js' %}"></script>
+  <script src = "{% static 'portal/js/main.js' %}"></script>
+
+  </body>
+</html>

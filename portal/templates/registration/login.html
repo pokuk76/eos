@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Tullow Oil Ghana | Login</title>
+      <!-- Meta tags -->
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="keywords" content="Tullow Oil Ghana"
+         />
+      <script>
+         addEventListener("load", function () { setTimeout(hideURLbar, 0); }, false); function hideURLbar() { window.scrollTo(0, 1); }
+      </script>
+      <!-- Meta tags -->
+      <!--stylesheets-->
+      <link href="{% static 'portal/css/style1.css' %}" rel='stylesheet' type='text/css' media="all">
+      <!--//style sheet end here-->
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+   </head>
+   <body>
+      <div class="mid-class">
+         <div class="art-right-w3ls">
+            <h2>Login</h2>
+            <form method="post" >
+              {% csrf_token %}
+              {{ form.as_p }}
+               <div class="main">
+
+
+                 <div class="left-side-forget">
+                    <input type="checkbox" class="checked">
+                    <span class="remenber-me">Remember me </span>
+                 </div>
+                 <div class="right-side-forget">
+                    <a href="#" class="for">Forgot password...?</a>
+                 </div>
+                 <div class="clear"></div>
+                 <div class="btnn">
+                    <button type="submit">Sign In</button>
+                 </div>
+                 <!-- <button type="submit">Login</button> -->
+               </div>
+            </form>
+            
+         </div>
+         <div class="art-left-w3ls">
+            <h1 cass="header-w3ls">
+            <div style="text-align: center">
+              <img src="{% static 'portal/images/original.jpg' %}" height="100px" />
+              </div>
+         </div>
+      </div>
+      <footer class="bottem-wthree-footer">
+         <p>
+            © 2019 Tullow Oil Ghana. All Rights Reserved | Powerd by
+            <a href="#" target="_blank">OI</a>
+         </p>
+      </footer>
+   </body>
+</html>

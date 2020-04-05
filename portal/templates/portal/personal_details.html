@@ -1,0 +1,37 @@
+<form action="{% url 'portal:personal_details' %}" method="post">
+  {% csrf_token %}
+  {{ form.non_field_errors }}
+  <div class="fieldWrapper">
+      {{ form.first_name.errors }}
+      <label for="{{ form.first_name.id_for_label }}">First Name:</label>
+      {{ form.first_name }}
+  </div>
+  <div class="fieldWrapper">
+      {{ form.last_name.errors }}
+      <label for="{{ form.last_name.id_for_label }}">Last Name:</label>
+      {{ form.last_name }}
+  </div>
+  <div class="fieldWrapper">
+      {{ form.phone_number.errors }}
+      <label for="{{ form.phone_number.id_for_label }}">Phone Number:</label>
+      {{ form.phone_number }}
+  </div>
+  <div class="fieldWrapper">
+      {{ form.virtual_address.errors }}
+      <label for="{{ form.virtual_address.id_for_label }}">Address</label>
+      {{ form.virtual_address }}
+  </div>
+  <div class="fieldWrapper">
+      {{ form.post_office_box.errors }}
+      <label for="{{ form.post_office_box.id_for_label }}">P.O. Box</label>
+      {{ form.post_office_box }}
+  </div>
+  <button type="submit">Submit</button>
+</form>
+<!--
+<form action="/personal_details/" method="post">
+    {% csrf_token %}
+    {{ form.as_table }}
+    <input type="submit" value="Submit">
+</form>
+-->
